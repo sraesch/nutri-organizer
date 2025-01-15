@@ -9,5 +9,6 @@ import Foundation
 
 protocol Backend {
     var recipes: Recipes { get }
+    var products: Products { get }
 }
 

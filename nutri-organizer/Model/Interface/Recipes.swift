@@ -24,11 +24,3 @@ struct RecipeQuery: Hashable, Codable {
     var offset: UInt32 = 0
     var limit: UInt32
 }
-
-
-extension RecipeInfo {
-    static let sampleData: [RecipeInfo] = [
-        RecipeInfo(id: "1", title: "Dish 1"),
-        RecipeInfo(id: "2", title: "Dish 2")
-    ]
-}

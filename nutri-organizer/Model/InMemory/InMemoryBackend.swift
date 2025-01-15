@@ -11,6 +11,7 @@ struct InMemoryBackend: Backend {
     static var backend: Backend = InMemoryBackend()
     
     var recipes: Recipes = InMemoryRecipes()
+    var products: Products = InMemoryProducts()
 }
 
 func backend() -> Backend {
