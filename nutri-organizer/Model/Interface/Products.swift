@@ -43,6 +43,7 @@ struct Nutrients: Hashable, Codable {
     var salt: Weight?
     var vitaminA: Weight?
     var vitaminC: Weight?
+    var vitaminD: Weight?
     var iron: Weight?
     var calcium: Weight?
     var magnesium: Weight?
@@ -64,6 +65,24 @@ struct ProductInfo: Hashable, Codable {
     
     /// The nutrients of the product
     var nutrients: Nutrients
+}
+
+extension ProductInfo {
+    static let example = ProductInfo(
+        id: ProductID.barcode("5411188124689"),
+        name: "Haferdrink ungesüßt, 1 Liter",
+        producer: "Alpro",
+        nutrients: Nutrients(
+            kcal: 40.0,
+            quantity: Quantity.volume(Volume(millilitre: 100)),
+            protein: Weight(gram: 0.2),
+            fat: Weight(gram: 1.5),
+            carbohydrates: Weight(gram: 5.6),
+            sugar: Weight(gram: 0.0),
+            salt: Weight(gram: 0.09),
+            calcium: Weight(milligram: 120)
+        )
+    )
 }
 
 /// The quantity in which the product details are expressed

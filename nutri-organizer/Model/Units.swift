@@ -35,18 +35,30 @@ struct Weight: Hashable, Codable {
         return value * 1e6
     }
     
+    /// Returns the weight as gram string
+    func gramString() -> String {
+        return String(format: "%.2f g", self.gram())
+    }
+    
+    /// Returns the weight as milligram string
+    func milligramString() -> String {
+        return String(format: "%.2f mg", self.milligram())
+    }
+    
+    /// Returns the weight as microgram string
+    func microgramString() -> String {
+        return String(format: "%.2f μg", self.microgram())
+    }
+    
     /// Returns the weight in a proper formatting as metric weight unit
     func metricString() -> String {
         // check for microgram
         if self.value < 5e-4 {
-            let microgram = round2(x: self.microgram())
-            return "\(microgram) μg"
+            return microgramString()
         } else if self.value < 5e-1 {
-            let milligram = round2(x: self.milligram())
-            return "\(milligram) mg"
+            return milligramString()
         } else {
-            let gram = round2(x: self.gram())
-            return "\(gram) g"
+            return gramString()
         }
     }
 }
