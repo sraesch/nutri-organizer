@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Haferdrink ungesüßt, 1 Liter",
+    "producer": "Alpro",
+    "id": {
+      "barcode": {
+        "_0": "5411188124689"
+      }
+    },
+    "nutrients": {
+      "calcium": {
+        "value": 0.12
+      },
+      "kcal": 40,
+      "carbohydrates": {
+        "value": 5.6
+      },
+      "salt": {
+        "value": 0.09
+      },
+      "protein": {
+        "value": 0.2
+      },
+      "fat": {
+        "value": 1.5
+      },
+      "sugar": {
+        "value": 0
+      },
+      "quantity": {
+        "volume": {
+          "_0": {
+            "value": 0.1
+          }
+        }
+      }
+    }
+  },
+  {
+      "name": "Bio-Joghurt Griechischer Art",
+      "producer": "Gläserne Molkerei",
+      "id": {
+        "barcode": {
+          "_0": "4260026433480"
+        }
+      },
+      "nutrients": {
+        "kcal": 100,
+        "carbohydrates": {
+          "value": 3.5
+        },
+        "salt": {
+          "value": 0.1
+        },
+        "protein": {
+          "value": 4.5
+        },
+        "fat": {
+          "value": 7.5
+        },
+        "sugar": {
+          "value": 3.5
+        },
+        "quantity": {
+          "weight": {
+            "_0": {
+              "value": 100.0
+            }
+          }
+        }
+      }
+  }
+]

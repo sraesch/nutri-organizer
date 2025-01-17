@@ -59,7 +59,7 @@ struct NutrientsView: View {
 }
 
 #Preview {
-    let exampleData = ProductInfo.example.nutrients
+    let exampleData = InMemoryProducts().products[1].nutrients
     
     NutrientsView(nutrients: exampleData)
 }
