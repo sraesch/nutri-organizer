@@ -1,6 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "-" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld kcal" : {
+
+    },
     "add_recipe" : {
       "extractionState" : "manual",
       "localizations" : {

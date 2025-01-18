@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol Products {
     /// Searches and tries to return the product by the given ID
@@ -30,6 +31,15 @@ enum ProductID: Hashable, Codable {
     case qr(String)
     /// A UUID, as there is no canonic way to identify the product
     case uuid(String)
+    
+    /// Returns the id as string
+    public func idString() -> String {
+        switch self {
+        case .barcode(let s): return s
+        case .qr(let s): return s
+        case .uuid(let s): return s
+        }
+    }
 }
 
 /// The nutrients of the product w.r.t to a certain predefined quantity
@@ -63,26 +73,11 @@ struct ProductInfo: Hashable, Codable {
     /// The producer of the product
     var producer: String?
     
+    /// A base64 preview string
+    var preview: String?
+    
     /// The nutrients of the product
     var nutrients: Nutrients
-}
-
-extension ProductInfo {
-    static let example = ProductInfo(
-        id: ProductID.barcode("5411188124689"),
-        name: "Haferdrink ungesüßt, 1 Liter",
-        producer: "Alpro",
-        nutrients: Nutrients(
-            kcal: 40.0,
-            quantity: Quantity.volume(Volume(millilitre: 100)),
-            protein: Weight(gram: 0.2),
-            fat: Weight(gram: 1.5),
-            carbohydrates: Weight(gram: 5.6),
-            sugar: Weight(gram: 0.0),
-            salt: Weight(gram: 0.09),
-            calcium: Weight(milligram: 120)
-        )
-    )
 }
 
 /// The quantity in which the product details are expressed

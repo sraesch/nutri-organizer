@@ -82,21 +82,23 @@ struct Volume: Hashable, Codable {
         return value * 1e3
     }
     
+    /// Returns the volume as millilitre string
+    func millilitreString() -> String {
+        return String(format: "%.2f ml", self.millilitre())
+    }
+    
+    /// Returns the volume as litre string
+    func litreString() -> String {
+        return String(format: "%.2f ml", self.litre())
+    }
+    
     /// Returns the weight in a proper formatting as metric weight unit
     func metricString() -> String {
         // check for microgram
         if self.value < 5e-1 {
-            let ml = round2(x: self.millilitre())
-            return "\(ml) ml"
+            return millilitreString()
         } else {
-            let l = round2(x: self.litre())
-            return "\(l) l"
+            return litreString()
         }
     }
-}
-
-
-/// Helper function to round a value to 2 digits behind the comma
-private func round2(x: Double) -> Double {
-    return (x * 1e2).rounded() * 1e-2
 }
