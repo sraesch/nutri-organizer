@@ -16,6 +16,9 @@ extension Logger {
     
     /// Logs that appears inside the views/components of the UI
     static let views: Logger = Logger(subsystem: subsystem, category: "views")
+    
+    /// Logs that are related to the device camera functionality
+    static let camera: Logger = Logger(subsystem: subsystem, category: "camera")
 
     /// All logs related to tracking and analytics.
     static let statistics: Logger = Logger(subsystem: subsystem, category: "statistics")

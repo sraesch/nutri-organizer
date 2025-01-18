@@ -2,13 +2,34 @@
   "sourceLanguage" : "en",
   "strings" : {
     "-" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%lld kcal" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kcal"
+          }
+        }
+      }
     },
     "add_recipe" : {
       "extractionState" : "manual",
@@ -57,6 +78,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calories"
+          }
+        }
+      }
+    },
+    "camera_access_request" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zugriff auf die Kamera, um den Produktcode zu scannen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessing the camera in order to scan the product code "
           }
         }
       }
@@ -231,6 +269,9 @@
         }
       }
     },
+    "Scan Code" : {
+
+    },
     "sodium" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -244,6 +285,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sodium"
+          }
+        }
+      }
+    },
+    "stop_scanning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scannen beenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop Scanning"
           }
         }
       }
