@@ -25,7 +25,7 @@ struct ProductCardView: View {
                 image.resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .frame(width: 50, height: 50)
+                    .frame(width: 60, height: 60)
             } else {
                 Image(systemName: "photo").resizable()
                     .scaledToFit()
@@ -36,6 +36,9 @@ struct ProductCardView: View {
             VStack(alignment: .leading) {
                 Text(productInfo.name)
                     .font(.headline)
+                    .alignmentGuide(.listRowSeparatorLeading) { d in
+                        d[.leading]
+                    }
                 Spacer()
                 HStack {
                     Label("\(productInfo.nutrients.quantity.metricString())", systemImage: "scalemass")
@@ -45,8 +48,6 @@ struct ProductCardView: View {
                 .font(.caption).foregroundColor(.accentColor)
             }
             .padding()
-            
-            
         }
     }
     
