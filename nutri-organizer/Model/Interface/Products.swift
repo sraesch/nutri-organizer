@@ -24,21 +24,12 @@ struct ProductQuery: Hashable, Codable {
 }
 
 /// An ID that uniquely identifies a product
-enum ProductID: Hashable, Codable {
-    /// A classic bar code to identify the product
-    case barcode(String)
-    /// The product is being identified by a QR-code
-    case qr(String)
-    /// A UUID, as there is no canonic way to identify the product
-    case uuid(String)
-    
+typealias ProductID = String;
+
+extension ProductID {
     /// Returns the id as string
     public func idString() -> String {
-        switch self {
-        case .barcode(let s): return s
-        case .qr(let s): return s
-        case .uuid(let s): return s
-        }
+        return self
     }
 }
 
